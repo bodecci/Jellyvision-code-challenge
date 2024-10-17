@@ -17,9 +17,9 @@ end
 post '/homer' do
   gift = parse_gift(request.body.read)
   if gift == 'donut'
-    [200, 'Woohoo']
+    [200, "Woohoo \n"]
   else
-    [400, "D'oh"]
+    [400, "D'oh \n"]
   end
 end
 
@@ -34,8 +34,8 @@ end
 post '/lisa' do
   gift = parse_gift(request.body.read)
   if gift == 'sax' || gift == 'saxophone'
-    [200, 'Great!\n']
+    [200, "Great! \n"]
   else
-    [400, "Hmm...you need to go get it\n"]
+    [400, "Hmm...you need to go get it \n"]
   end
 end
