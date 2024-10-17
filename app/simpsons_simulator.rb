@@ -33,9 +33,16 @@ end
 
 post '/lisa' do
   gift = parse_gift(request.body.read)
-  if gift == 'sax' || gift == 'saxophone'
-    [200, "I REALLY love it \n"]
-  else
+  case gift
+  when 'books', 'book'
+    [200, "I love it \n"]
+  when 'sax', 'saxophone'
+    [200, "I really love it \n"]
+  when 'skateboard'
+    [400, "I really hate it \n"]
+  when 'video game', 'video_game'
     [400, "I hate it \n"]
+  else
+    [400, "Hmm...not sure\n"]
   end
 end
