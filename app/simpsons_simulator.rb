@@ -27,6 +27,8 @@ end
 # FIXME: Implement Lisa endpoints #
 ###################################
 
+# TODO add error handling.
+
 get '/lisa' do
   "The baritone sax is the best sax"
 end
