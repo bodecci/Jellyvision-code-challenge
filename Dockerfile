@@ -51,5 +51,6 @@ RUN gem install bundler -v 2.4.22 && gem install sinatra -v 2.0.8.1 && \
 # Expose the application port
 EXPOSE 4567
 
-# Run the application
-CMD ["ruby", "app/simpsons_simulator.rb"]
+# Run the application, binding it to 0.0.0.0
+CMD ["ruby", "app/simpsons_simulator.rb", "-o", "0.0.0.0"]
+
