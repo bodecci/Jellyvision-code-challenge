@@ -17,9 +17,9 @@ end
 post '/homer' do
   gift = parse_gift(request.body.read)
   if gift == 'donut'
-    [200, "Woohoo \n"]
+    [200, "Woohoo"]
   else
-    [400, "D'oh \n"]
+    [400, "D'oh"]
   end
 end
 
@@ -37,14 +37,14 @@ post '/lisa' do
   gift = parse_gift(request.body.read)
   case gift
   when 'books', 'book'
-    [200, "I love it \n"]
-  when 'sax', 'saxophone'
-    [200, "I really love it \n"]
+    [200, "I love it"]
+  when 'saxaphone', 'sax'
+    [200, "I REALLY love it"]
   when 'skateboard'
-    [400, "I really hate it \n"]
+    [400, "I REALLY hate it"]
   when 'video game', 'video_game'
-    [400, "I hate it \n"]
+    [400, "I hate it"]
   else
-    [400, "Hmm...not sure\n"]
+    [400, "Hmm...not sure"]
   end
 end
