@@ -1,5 +1,5 @@
 env:
-	python -m venv env
+	python3 -m venv env
 
 deps: env
 	env/bin/pip install -U -r requirements.txt
