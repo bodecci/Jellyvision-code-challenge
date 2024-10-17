@@ -28,14 +28,14 @@ end
 ###################################
 
 get '/lisa' do
-  "I hope you brought your sax!"
+  "The baritone sax is the best sax"
 end
 
 post '/lisa' do
   gift = parse_gift(request.body.read)
   if gift == 'sax' || gift == 'saxophone'
-    [200, "Great! \n"]
+    [200, "I REALLY love it \n"]
   else
-    [400, "Hmm...you need to go get it \n"]
+    [400, "I hate it \n"]
   end
 end
