@@ -26,3 +26,16 @@ end
 ###################################
 # FIXME: Implement Lisa endpoints #
 ###################################
+
+get '/lisa' do
+  "I hope you brought your sax!"
+end
+
+post '/lisa' do
+  gift = parse_gift(request.body.read)
+  if gift == 'sax' || gift == 'saxophone'
+    [200, 'Great!\n']
+  else
+    [400, "Hmm...you need to go get it\n"]
+  end
+end
